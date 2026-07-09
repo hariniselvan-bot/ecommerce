@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" style="background: var(--pure-white); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home"><img src="images/logo.webp" alt="Stackly logo"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+        <a href="index.html#collections" class="nav-icon" aria-label="Cart" style="position: relative;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="nav-badge" style="display: none;"></span>
+        </a>
+        <div class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay"></div>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+
+  <!-- Error Page -->
+  <section class="error-page">
+    <div class="container" style="text-align: center;">
+      <div class="error-code" data-aos="zoom-in">404</div>
+      <h2 class="error-title" data-aos="fade-up">Page Not Found</h2>
+      <p class="error-text" data-aos="fade-up" data-aos-delay="100">
+        The page you're looking for doesn't exist or has been moved. 
+        Let's get you back on track.
+      </p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <button type="button" class="btn btn-primary btn-lg" data-go-back style="margin-right: 16px;">Go Back</button>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Support</a>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="star-decoration" style="position: absolute; top: 20%; left: 15%;">
+        <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+      </div>
+      <div class="star-decoration" style="position: absolute; top: 30%; right: 20%; animation-delay: 0.5s;">
+        <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+      </div>
+      <div class="star-decoration" style="position: absolute; bottom: 25%; left: 25%; animation-delay: 1s;">
+        <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

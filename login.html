@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Stackly</title>
+  <meta name="description" content="Login to your Stackly account. Access your dashboard, orders, and personalized recommendations.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" style="background: var(--pure-white); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home"><img src="images/logo.webp" alt="Stackly logo"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html#collections" class="nav-icon" aria-label="Cart" style="position: relative;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="nav-badge" style="display: none;"></span>
+        </a>
+        <a href="register.html" class="btn btn-outline btn-sm">Register</a>
+        <div class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay"></div>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Auth Page -->
+  <section class="auth-page">
+    <div class="auth-container">
+      <div class="auth-visual">
+        <img src="images/hero_model_1.webp" alt="Fashion">
+        <div class="auth-visual-overlay">
+          <h2>Welcome Back</h2>
+          <p>Sign in to access your personalized dashboard, track orders, and discover your style.</p>
+        </div>
+      </div>
+
+      <div class="auth-form-wrapper">
+        <a href="index.html" class="auth-logo">STACK<span>LY</span></a>
+        <h2>Sign In</h2>
+        <p>Enter your credentials to access your account.</p>
+
+        <form id="loginForm" style="margin-top: 32px;">
+          <div class="role-selector">
+            <div class="role-option active" data-role="user">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>User</span>
+            </div>
+            <div class="role-option" data-role="admin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Admin</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="loginEmail" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer;">
+              <input type="checkbox" style="width: auto;"> Remember me
+            </label>
+            <a href="404.html" style="font-size: 14px; color: var(--accent-blue);">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+
+        <div class="auth-links">
+          <p>Don't have an account? <a href="register.html">Register now</a></p>
+        </div>
+
+        <!-- Demo Credentials -->
+        <div style="margin-top: 32px; padding: 16px; background: var(--bg-primary); border: 1px solid var(--border-light);">
+          <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 8px;">Demo Credentials</p>
+          <p style="font-size: 13px; color: var(--text-muted);"><strong>User:</strong> user@stackly.com / password</p>
+          <p style="font-size: 13px; color: var(--text-muted);"><strong>Admin:</strong> admin@stackly.com / password</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Stackly</title>
+  <meta name="description" content="Create your Stackly account. Join our community of fashion enthusiasts.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" style="background: var(--pure-white); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home"><img src="images/logo.webp" alt="Stackly logo"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html#collections" class="nav-icon" aria-label="Cart" style="position: relative;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="nav-badge" style="display: none;"></span>
+        </a>
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <div class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay"></div>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Auth Page -->
+  <section class="auth-page">
+    <div class="auth-container">
+      <div class="auth-visual">
+        <img src="images/hero_model_2.jpg" alt="Fashion">
+        <div class="auth-visual-overlay">
+          <h2>Join Stackly</h2>
+          <p>Create an account and start your fashion journey with us today.</p>
+        </div>
+      </div>
+
+      <div class="auth-form-wrapper">
+        <a href="index.html" class="auth-logo">STACK<span>LY</span></a>
+        <h2>Create Account</h2>
+        <p>Fill in your details to get started.</p>
+
+        <form id="registerForm" style="margin-top: 32px;">
+          <div class="role-selector">
+            <div class="role-option active" data-role="user">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>User</span>
+            </div>
+            <div class="role-option" data-role="admin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Admin</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="registerName" placeholder="John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="registerEmail" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="registerPassword" placeholder="Create a strong password" required>
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" id="registerConfirmPassword" placeholder="Confirm your password" required>
+          </div>
+
+          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 13px; margin-bottom: 24px; cursor: pointer;">
+            <input type="checkbox" required style="width: auto; margin-top: 3px;">
+            <span>I agree to the <a href="404.html" style="text-decoration: underline;">Terms of Service</a> and <a href="404.html" style="text-decoration: underline;">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+        </form>
+
+        <div class="auth-links">
+          <p>Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

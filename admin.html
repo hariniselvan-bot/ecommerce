@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Stackly</title>
+  <meta name="description" content="Stackly admin dashboard. Manage orders, users, products, and view analytics.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-mobile-toggle">
+        <a href="index.html" class="dashboard-logo" aria-label="Stackly home"><img src="images/logo.webp" alt="Stackly logo"></a>
+        <button type="button" class="dashboard-toggle-btn" aria-label="Toggle menu"><span></span></button>
+      </div>
+
+      <nav class="dashboard-nav">
+        <a href="404.html" class="dashboard-nav-item active" data-section="admin-overview">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Overview
+        </a>
+        <a href="404.html" class="dashboard-nav-item" data-section="admin-orders">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          Orders
+        </a>
+        <a href="404.html" class="dashboard-nav-item" data-section="admin-users">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Users
+        </a>
+        <a href="404.html" class="dashboard-nav-item" data-section="admin-products">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          Products
+        </a>
+        <a href="404.html" class="dashboard-nav-item" data-section="admin-messages">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Messages
+        </a>
+        <a href="404.html" class="dashboard-nav-item" data-section="admin-settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2_
+        </a>
+      </nav>
+
+      <div class="dashboard-user">
+        <div class="dashboard-user-avatar" id="dashboardUserAvatar" style="background: var(--accent-blue);">A</div>
+        <div class="dashboard-user-info">
+          <p id="dashboardUserName">Admin</p>
+          <span id="dashboardUserRole">admin</span>
+        </div>
+      </div>
+
+      <button data-logout class="dashboard-nav-item" style="margin-top: 12px; width: 100%;">
+        <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        Logout
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <div class="dashboard-actions">
+          <div class="dashboard-search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Search...">
+          </div>
+          <a href="index.html" class="btn btn-outline btn-sm">View Store</a>
+        </div>
+      </div>
+
+      <!-- Overview Section -->
+      <div class="dashboard-section" id="admin-overview">
+        <div class="dashboard-stats">
+          <div class="dashboard-stat-card" data-aos="fade-up" data-aos-delay="0">
+            <h4>Total Revenue</h4>
+            <div class="dashboard-stat-value">$48.2K</div>
+            <div class="dashboard-stat-change positive">+23% from last month</div>
+          </div>
+          <div class="dashboard-stat-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>Total Orders</h4>
+            <div class="dashboard-stat-value">1,284</div>
+            <div class="dashboard-stat-change positive">+18% from last month</div>
+          </div>
+          <div class="dashboard-stat-card" data-aos="fade-up" data-aos-delay="200">
+            <h4>Total Users</h4>
+            <div class="dashboard-stat-value">3,842</div>
+            <div class="dashboard-stat-change positive">+12% from last month</div>
+          </div>
+          <div class="dashboard-stat-card" data-aos="fade-up" data-aos-delay="300">
+            <h4>Products</h4>
+            <div class="dashboard-stat-value">2,156</div>
+            <div class="dashboard-stat-change">156 new this month</div>
+          </div>
+        </div>
+
+        <!-- Charts & Tables -->
+        <div class="admin-grid" style="margin-top: 24px;">
+          <div>
+            <div class="admin-chart-placeholder" data-aos="fade-up">
+              <h3 style="font-family: var(--font-display); font-size: 18px; font-weight: 600;">Revenue Overview</h3>
+              <div class="admin-chart-bar">
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+                <div class="admin-chart-bar-item"></div>
+              </div>
+              <p style="font-size: 12px; color: var(--text-muted);">Last 7 Days Revenue</p>
+            </div>
+          </div>
+          <div>
+            <div class="dashboard-table-container" data-aos="fade-up">
+              <div class="dashboard-table-header">
+                <h3>Top Products</h3>
+              </div>
+              <table class="dashboard-table">
+                <thead>
+                  <tr><th>Product</th><th>Sales</th><th>Revenue</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Premium Hoodie</td><td>342</td><td>$30,438</td></tr>
+                  <tr><td>Designer Boots</td><td>256</td><td>$62,720</td></tr>
+                  <tr><td>Leather Bag</td><td>189</td><td>$80,325</td></tr>
+                  <tr><td>Sunglasses</td><td>167</td><td>$25,213</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="dashboard-table-container" style="margin-top: 24px;" data-aos="fade-up">
+          <div class="dashboard-table-header">
+            <h3>Recent Orders</h3>
+            <a href="404.html" class="btn btn-outline btn-sm" data-section="admin-orders" onclick="document.querySelector('[data-section=admin-orders]').click()">View All</a>
+          </div>
+          <table class="dashboard-table" id="ordersTable">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Orders Section -->
+      <div class="dashboard-section" id="admin-orders" style="display: none;">
+        <div class="dashboard-table-container">
+          <div class="dashboard-table-header">
+            <h3>All Orders</h3>
+            <div style="display: flex; gap: 8px;">
+              <select style="padding: 8px 12px; border: 1px solid var(--border-light); font-size: 13px;">
+                <option>All Status</option>
+                <option>Pending</option>
+                <option>Shipped</option>
+                <option>Delivered</option>
+                <option>Cancelled</option>
+              </select>
+              <button class="btn btn-primary btn-sm">Export</button>
+            </div>
+          </div>
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>#ORD-001</td><td>John Doe</td><td>Jul 1, 2026</td><td>3</td><td>$245.00</td><td><span class="status-badge completed">Delivered</span></td><td><a href="#">View</a></td></tr>
+              <tr><td>#ORD-002</td><td>Jane Smith</td><td>Jul 2, 2026</td><td>1</td><td>$189.50</td><td><span class="status-badge pending">Shipped</span></td><td><a href="#">View</a></td></tr>
+              <tr><td>#ORD-003</td><td>Mike Johnson</td><td>Jul 3, 2026</td><td>5</td><td>$456.00</td><td><span class="status-badge completed">Delivered</span></td><td><a href="#">View</a></td></tr>
+              <tr><td>#ORD-004</td><td>Sarah Williams</td><td>Jul 4, 2026</td><td>2</td><td>$78.99</td><td><span class="status-badge cancelled">Cancelled</span></td><td><a href="#">View</a></td></tr>
+              <tr><td>#ORD-005</td><td>David Brown</td><td>Jul 5, 2026</td><td>4</td><td>$329.00</td><td><span class="status-badge pending">Pending</span></td><td><a href="#">View</a></td></tr>
+              <tr><td>#ORD-006</td><td>Emily Davis</td><td>Jul 5, 2026</td><td>2</td><td>$178.00</td><td><span class="status-badge completed">Delivered</span></td><td><a href="#">View</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Users Section -->
+      <div class="dashboard-section" id="admin-users" style="display: none;">
+        <div class="dashboard-table-container">
+          <div class="dashboard-table-header">
+            <h3>All Users</h3>
+            <button class="btn btn-primary btn-sm" onclick="Toast.success('Feature coming soon!')">Add User</button>
+          </div>
+          <table class="dashboard-table" id="usersTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Products Section -->
+      <div class="dashboard-section" id="admin-products" style="display: none;">
+        <div class="dashboard-table-container">
+          <div class="dashboard-table-header">
+            <h3>Products</h3>
+            <button class="btn btn-primary btn-sm" onclick="Toast.success('Feature coming soon!')">Add Product</button>
+          </div>
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Premium Black Hoodie</td><td>Streetwear</td><td>$89.00</td><td>234</td><td><span class="status-badge completed">Active</span></td><td><a href="404.html">Edit</a> | <a href="404.html">Delete</a></td></tr>
+              <tr><td>Designer Sunglasses</td><td>Accessories</td><td>$156.00</td><td>89</td><td><span class="status-badge completed">Active</span></td><td><a href="404.html">Edit</a> | <a href="404.html">Delete</a></td></tr>
+              <tr><td>Leather Chelsea Boots</td><td>Footwear</td><td>$245.00</td><td>45</td><td><span class="status-badge pending">Low Stock</span></td><td><a href="404.html">Edit</a> | <a href="404.html">Delete</a></td></tr>
+              <tr><td>Technical Knit Sweater</td><td>Knitwear</td><td>$178.00</td><td>0</td><td><span class="status-badge cancelled">Out of Stock</span></td><td><a href="404.html">Edit</a> | <a href="404.html">Delete</a></td></tr>
+              <tr><td>Oversized Blazer</td><td>Tailoring</td><td>$320.00</td><td>67</td><td><span class="status-badge completed">Active</span></td><td><a href="404.html">Edit</a> | <a href="404.html">Delete</a></ td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Messages Section -->
+      <div class="dashboard-section" id="admin-messages" style="display: none;">
+        <div class="dashboard-table-container">
+          <div class="dashboard-table-header">
+            <h3>Contact Messages</h3>
+          </div>
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Alice Cooper</td><td>alice@email.com</td><td>General Inquiry</td><td>Do you offer gift wrapping?</td><td>Jul 5, 2026</td><td><a href="#">Reply</a></td></tr>
+              <tr><td>Bob Martinez</td><td>bob@email.com</td><td>Customer Support</td><td>Issue with my order #ORD-001</td><td>Jul 4, 2026</td><td><a href="#">Reply</a></td></tr>
+              <tr><td>Carol White</td><td>carol@email.com</td><td>Partnership</td><td>Interested in wholesale partnership</td><td>Jul 3, 2026</td><td><a href="#">Reply</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="dashboard-section" id="admin-settings" style="display: none;">
+        <div class="dashboard-table-container">
+          <div class="dashboard-table-header">
+            <h3>Site Settings</h3>
+          </div>
+          <div style="padding: 32px; max-width: 700px;">
+            <form>
+              <div style="margin-bottom: 24px;">
+                <h4 style="font-family: var(--font-display); font-size: 16px; margin-bottom: 16px;">General Settings</h4>
+                <div class="form-group">
+                  <label>Site Name</label>
+                  <input type="text" value="Stackly">
+                </div>
+                <div class="form-group">
+                  <label>Site Description</label>
+                  <textarea style="min-height: 60px;">Premium Fashion E-Commerce Platform</textarea>
+                </div>
+                <div class="form-group">
+                  <label>Contact Email</label>
+                  <input type="email" value="hello@stackly.com">
+                </div>
+              </div>
+
+              <div style="margin-bottom: 24px; padding: 24px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+                <h4 style="font-family: var(--font-display); font-size: 16px; margin-bottom: 16px;">Shipping Settings</h4>
+                <div class="form-group">
+                  <label>Free Shipping Threshold ($)</label>
+                  <input type="number" value="200">
+                </div>
+                <div class="form-group">
+                  <label>Standard Shipping Rate ($)</label>
+                  <input type="number" value="9.99">
+                </div>
+                <div class="form-group">
+                  <label>Express Shipping Rate ($)</label>
+                  <input type="number" value="19.99">
+                </div>
+              </div>
+
+              <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-light);">
+                <h4 style="font-family: var(--font-display); font-size: 16px; margin-bottom: 16px;">Notification Settings</h4>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 8px; cursor: pointer;">
+                  <input type="checkbox" checked style="width: auto;"> Email admin on new orders
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 8px; cursor: pointer;">
+                  <input type="checkbox" checked style="width: auto;"> Email admin on new user registration
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer;">
+                  <input type="checkbox" style="width: auto;"> Email admin on low stock alerts
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Save Settings</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

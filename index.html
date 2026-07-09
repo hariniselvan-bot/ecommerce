@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly | Premium Fashion E-Commerce</title>
+  <meta name="description" content="Stackly - Find clothes that match your style. Premium fashion e-commerce with curated streetwear and avant-garde fashion.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Page Transition -->
+  <div class="page-transition"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">DRAG</div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home"><img src="images/logo.webp" alt="Stackly logo"></a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+        <div class="nav-icon" aria-label="Cart" style="position: relative;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="nav-badge" style="display: none;"></span>
+        </div>
+        <div class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-visuals">
+      <div class="hero-row" data-x="0">
+        <img src="images/hero_model_1.webp" alt="Fashion Model 1">
+        <img src="images/hero_model_2.webp" alt="Fashion Model 2">
+        <img src="images/hero_model_3.webp" alt="Fashion Model 3">
+        <img src="images/hero_model_4.webp" alt="Fashion Model 4">
+        <img src="images/hero_model_5.webp" alt="Fashion Model 5">
+        <img src="images/hero_model_6.webp" alt="Fashion Model 6">
+      </div>
+      <div class="hero-row" data-x="0">
+        <img src="images/hero_model_4.webp" alt="Fashion Model 4">
+        <img src="images/hero_model_5.webp" alt="Fashion Model 5">
+        <img src="images/hero_model_6.webp" alt="Fashion Model 6">
+        <img src="images/hero_model_1.webp" alt="Fashion Model 1">
+        <img src="images/hero_model_2.webp" alt="Fashion Model 2">
+        <img src="images/hero_model_3.webp" alt="Fashion Model 3">
+      </div>
+      <div class="hero-row" data-x="0">
+        <img src="images/hero_model_2.webp" alt="Fashion Model 2">
+        <img src="images/hero_model_3.webp" alt="Fashion Model 3">
+        <img src="images/hero_model_4.webp" alt="Fashion Model 4">
+        <img src="images/hero_model_5.webp" alt="Fashion Model 5">
+        <img src="images/hero_model_6.webp" alt="Fashion Model 6">
+        <img src="images/hero_model_1.webp" alt="Fashion Model 1">
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title" data-glitch="FIND CLOTHES THAT MATCHES YOUR STYLE">
+          <span class="word-mask"><span class="word-inner">FIND</span></span>
+          <span class="word-mask"><span class="word-inner">CLOTHES</span></span>
+          <span class="word-mask"><span class="word-inner">THAT</span></span>
+          <span class="word-mask"><span class="word-inner">MATCHES</span></span>
+          <span class="word-mask"><span class="word-inner">YOUR</span></span>
+          <span class="word-mask"><span class="word-inner">STYLE</span></span>
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+        </p>
+        <a href="#about" class="btn btn-primary hero-cta" data-aos="fade-up" data-aos-delay="400">Shop Now</a>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-counter="200" data-suffix="+">0+</div>
+            <div class="hero-stat-label">International Brands</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-counter="2000" data-suffix="+">0+</div>
+            <div class="hero-stat-label">High-Quality Products</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-counter="30000" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Star Decorations -->
+    <div class="star-decoration" style="top: 15%; right: 15%;">
+      <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+    </div>
+    <div class="star-decoration" style="bottom: 25%; left: 5%; animation-delay: 1s;">
+      <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+    </div>
+  </section>
+
+  <!-- Brand Marquee -->
+  <section class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">VERSACE</span>
+      <span class="marquee-item">ZARA</span>
+      <span class="marquee-item">GUCCI</span>
+      <span class="marquee-item">PRADA</span>
+      <span class="marquee-item">BALENCIAGA</span>
+      <span class="marquee-item">CALVIN KLEIN</span>
+      <span class="marquee-item">VERSACE</span>
+      <span class="marquee-item">ZARA</span>
+      <span class="marquee-item">GUCCI</span>
+      <span class="marquee-item">PRADA</span>
+      <span class="marquee-item">BALENCIAGA</span>
+      <span class="marquee-item">CALVIN KLEIN</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image" data-aos="fade-right">
+          <img src="images/hero_model_5.webp" alt="About Stackly" class="parallax-img">
+        </div>
+        <div class="about-content" data-aos="fade-left">
+          <p class="about-label">About Us</p>
+          <h2 class="display-lg about-title reveal-text">The Future of Fashion Retail</h2>
+          <p class="about-text">
+            Stackly is a premium e-commerce destination that bridges the gap between high fashion and accessibility. 
+            Founded in 2024, we've curated a collection of over 200 international brands, bringing cutting-edge 
+            streetwear and avant-garde fashion to discerning customers worldwide.
+          </p>
+          <p class="about-text">
+            Our mission is simple: to help you find clothes that truly match your style. Every piece in our 
+            collection is handpicked by our team of fashion experts who understand that style is personal, 
+            dynamic, and ever-evolving.
+          </p>
+          <a href="about.html" class="btn btn-outline">Learn More</a>
+
+          <div class="about-features">
+            <div class="about-feature" data-aos="fade-up" data-aos-delay="100">
+              <h4>Premium Quality</h4>
+              <p>Only the finest materials and craftsmanship make it into our collection.</p>
+            </div>
+            <div class="about-feature" data-aos="fade-up" data-aos-delay="200">
+              <h4>Sustainable Fashion</h4>
+              <p>Committed to eco-friendly practices and ethical sourcing.</p>
+            </div>
+            <div class="about-feature" data-aos="fade-up" data-aos-delay="300">
+              <h4>Global Shipping</h4>
+              <p>Fast, reliable delivery to over 150 countries worldwide.</p>
+            </div>
+            <div class="about-feature" data-aos="fade-up" data-aos-delay="400">
+              <h4>24/7 Support</h4>
+              <p>Our dedicated team is always here to help you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">What We Offer</p>
+        <h2 class="display-lg section-title reveal-text">Our Services</h2>
+        <p class="section-subtitle">
+          From personal styling to global shipping, we provide a complete fashion retail experience.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          <h3>Curated Collections</h3>
+          <p>Handpicked selections from over 200 international brands, updated weekly with the latest trends.</p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v4m0 14v4m4.22-15.22l-2.83 2.83m-6.38 6.38l-2.83 2.83M23 12h-4M5 12H1m16.22 7.22l-2.83-2.83m-6.38-6.38l-2.83-2.83"></path>
+          </svg>
+          <h3>Personal Styling</h3>
+          <p>Get expert advice from our fashion consultants to find your perfect look.</p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <h3>Express Shipping</h3>
+          <p>Free worldwide delivery on orders over $200. Express options available.</p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          <h3>Easy Returns</h3>
+          <p>30-day hassle-free returns. No questions asked, full refund guaranteed.</p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <h3>Virtual Try-On</h3>
+          <p>Use AR technology to see how clothes look on you before buying.</p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <h3>VIP Membership</h3>
+          <p>Exclusive access to sales, early drops, and member-only collections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Collection (3D Carousel) -->
+  <section class="signature" id="collection">
+    <div class="container">
+      <div class="signature-header" data-aos="fade-up">
+        <div>
+          <p class="signature-label">Signature 2026</p>
+          <h2 class="display-lg signature-title reveal-text">The Collection</h2>
+        </div>
+        <p class="signature-description">
+          Our signature collection represents the pinnacle of contemporary fashion. Each piece is a statement, 
+          crafted for those who dare to stand out.
+        </p>
+      </div>
+
+      <div class="carousel-3d-wrapper">
+        <div class="carousel-3d">
+          <div class="carousel-card">
+            <img src="images/collection_shoe_1.webp" alt="Premium Sneakers">
+          </div>
+          <div class="carousel-card">
+            <img src="images/collection_shoe_2.webp" alt="Luxury Handbag">
+          </div>
+          <div class="carousel-card">
+            <img src="images/collection_shoe_3.webp" alt="Designer Sunglasses">
+          </div>
+          <div class="carousel-card">
+            <img src="images/collection_shoe_4.webp" alt="Leather Boots">
+          </div>
+          <div class="carousel-card">
+            <img src="images/collection_shoe_5.webp" alt="Designer Backpack">
+          </div>
+          <div class="carousel-card">
+            <img src="images/hero_model_1.webp" alt="Streetwear">
+          </div>
+          <div class="carousel-card">
+            <img src="images/hero_model_3.webp" alt="Technical Wear">
+          </div>
+          <div class="carousel-card">
+            <img src="images/hero_model_6.webp" alt="Outerwear">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Archive Section -->
+  <section class="archive" id="archive">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">The Archive</p>
+        <h2 class="display-lg section-title reveal-text">Editorial Picks</h2>
+        <p class="section-subtitle">
+          Explore our curated editorial selections featuring the best in contemporary fashion.
+        </p>
+      </div>
+
+      <div class="archive-grid">
+        <div class="archive-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/archive_fashion_1.webp" alt="Rebirth of Cargo">
+          <div class="archive-overlay">
+            <h3>REBIRTH OF CARGO</h3>
+            <p>Utility meets style in our latest cargo collection</p>
+          </div>
+        </div>
+
+        <div class="archive-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/archive_fashion_2.webp" alt="Technical Knitwear">
+          <div class="archive-overlay">
+            <h3>TECHNICAL KNITWEAR</h3>
+            <p>Innovation in every stitch</p>
+          </div>
+        </div>
+
+        <div class="archive-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/archive_fashion_3.webp" alt="Monochrome Suits">
+          <div class="archive-overlay">
+            <h3>MONOCHROME SUITS</h3>
+            <p>Timeless elegance in black and white</p>
+          </div>
+        </div>
+
+        <div class="archive-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/archive_fashion_4.webp" alt="Deconstructed Layers">
+          <div class="archive-overlay">
+            <h3>DECONSTRUCTED LAYERS</h3>
+            <p>Fashion as wearable art</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Pricing Plans</p>
+        <h2 class="display-lg section-title reveal-text">Choose Your Plan</h2>
+        <p class="section-subtitle">
+          Flexible membership options designed for every fashion enthusiast.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="pricing-name">Basic</h3>
+          <p class="pricing-description">Perfect for casual shoppers</p>
+          <div class="pricing-price">$9.99</div>
+          <p class="pricing-period">per month</p>
+          <ul class="pricing-features">
+            <li>Free standard shipping</li>
+            <li>10% off all purchases</li>
+            <li>Early access to sales</li>
+            <li>Monthly style guide</li>
+            <li>Priority fulfillment</li>
+            <li>Email support</li>
+          </ul>
+          <a href="register.html" class="btn btn-outline">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+          <span class="pricing-badge">Popular</span>
+          <h3 class="pricing-name">Premium</h3>
+          <p class="pricing-description">Best value for fashion lovers</p>
+          <div class="pricing-price">$29.99</div>
+          <p class="pricing-period">per month</p>
+          <ul class="pricing-features">
+            <li>Free express shipping</li>
+            <li>25% off all purchases</li>
+            <li>VIP early access to drops</li>
+            <li>Weekly personal styling</li>
+            <li>Priority 24/7 support</li>
+            <li>Exclusive member events</li>
+          </ul>
+          <a href="register.html" class="btn btn-outline-light">Get Started</a>
+        </div>
+
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="pricing-name">Business</h3>
+          <p class="pricing-description">For fashion retailers</p>
+          <div class="pricing-price">$99.99</div>
+          <p class="pricing-period">per month</p>
+          <ul class="pricing-features">
+            <li>Wholesale pricing</li>
+            <li>Bulk order discounts</li>
+            <li>Dedicated account manager</li>
+            <li>API access</li>
+            <li>Custom integrations</li>
+            <li>Priority fulfillment</li>
+          </ul>
+          <a href="register.html" class="btn btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-left" data-aos="fade-right">
+          <p class="section-label">FAQ</p>
+          <h2 class="display-lg section-title reveal-text">Common Questions</h2>
+          <p class="section-subtitle" style="margin-top: 20px;">
+            Can't find what you're looking for? Feel free to reach out to our support team.
+          </p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top: 30px;">Contact Us</a>
+        </div>
+
+        <div class="faq-list" data-aos="fade-left">
+          <div class="faq-item active">
+            <button class="faq-question">
+              What is Stackly?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Stackly is a premium fashion e-commerce platform offering curated collections from over 200 international brands. We specialize in streetwear, avant-garde fashion, and luxury accessories.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I track my order?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Once your order ships, you'll receive a tracking number via email. You can also track your order in your account dashboard under the "Orders" section.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is your return policy?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We offer a 30-day hassle-free return policy. Items must be unworn with original tags attached. Simply initiate a return from your account dashboard and we'll provide a prepaid shipping label.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you ship internationally?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! We ship to over 150 countries worldwide. Shipping times vary by location, typically 3-5 business days for express and 7-14 business days for standard shipping.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I become a VIP member?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can sign up for our Premium membership plan on our pricing page. VIP members get exclusive access to sales, early product drops, personal styling sessions, and much more.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What payment methods do you accept?
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and cryptocurrency payments including Bitcoin and Ethereum.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">From The Blog</p>
+        <h2 class="display-lg section-title reveal-text">Latest Stories</h2>
+        <p class="section-subtitle">
+          Fashion news, styling tips, and behind-the-scenes content.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-image">
+            <img src="images/blog_1.webp" alt="Streetwear Essentials">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Style Guide</span>
+              <span class="blog-date">Jan 15, 2026</span>
+            </div>
+            <h3>10 Streetwear Essentials for 2026</h3>
+            <p>Discover the must-have pieces that will define street fashion this year, from oversized hoodies to technical cargo pants.</p>
+            <a href="blog.html" class="blog-read-more">Read Article</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="blog-image">
+            <img src="images/blog_2.webp" alt="Craftsmanship">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Behind The Seams</span>
+              <span class="blog-date">Jan 10, 2026</span>
+            </div>
+            <h3>The Art of Craftsmanship</h3>
+            <p>Go behind the scenes and discover the meticulous process behind our premium garment production.</p>
+            <a href="blog.html" class="blog-read-more">Read Article</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="blog-image">
+            <img src="images/blog_3.webp" alt="Fashion Week">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Events</span>
+              <span class="blog-date">Jan 5, 2026</span>
+            </div>
+            <h3>Fashion Week 2026 Recap</h3>
+            <p>Our team covers the biggest moments from Fashion Week, highlighting emerging trends and standout collections.</p>
+            <a href="blog.html" class="blog-read-more">Read Article</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/logo.webp" alt="Stackly logo"></div>
+          <p>Find clothes that match your style. Premium fashion e-commerce with curated collections from around the world.</p>
+          <form class="footer-newsletter" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="footer-column">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="404.html">New Arrivals</a></li>
+            <li><a href="404.html">Best Sellers</a></li>
+            <li><a href="404.html">Sale</a></li>
+            <li><a href="404.html">Collections</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="404.html">Shipping</a></li>
+            <li><a href="404.html">Returns</a></li>
+            <li><a href="404.html">Size Guide</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Stackly. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="404.html" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="404.html" aria-label="Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="404.html" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="btn btn-primary" style="position: fixed; bottom: 30px; right: 30px; z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s; padding: 12px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
