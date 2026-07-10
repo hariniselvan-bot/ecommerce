@@ -1972,6 +1972,17 @@ input, textarea, select {
   justify-content: center;
   background: var(--bg-primary);
   text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.error-card {
+  position: relative;
+  background: var(--pure-white);
+  border: 1px solid var(--border-light);
+  padding: clamp(32px, 5vw, 56px);
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
 }
 
 .error-code {
@@ -2005,6 +2016,30 @@ input, textarea, select {
 .error-text {
   color: var(--text-muted);
   margin-bottom: var(--space-8);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.error-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.error-links a:hover {
+  color: var(--primary-black);
 }
 
 /* ==========================================
@@ -2212,6 +2247,81 @@ input, textarea, select {
 }
 
 /* Dashboard Table */
+.dashboard-section {
+  display: none;
+}
+
+.dashboard-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.dashboard-panel-card {
+  background: var(--pure-white);
+  border: 1px solid var(--border-light);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+}
+
+.dashboard-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.dashboard-panel-head h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.dashboard-panel-copy {
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.dashboard-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.dashboard-pill {
+  display: inline-flex;
+  padding: 6px 10px;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(0, 37, 206, 0.08);
+  color: var(--accent-blue);
+  border-radius: 999px;
+}
+
+.dashboard-panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.dashboard-panel-list li {
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.dashboard-panel-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+}
+
 .dashboard-table-container {
   background: var(--pure-white);
   border: 1px solid var(--border-light);
@@ -2465,6 +2575,11 @@ input, textarea, select {
     padding-top: var(--nav-height);
   }
 
+  body.admin-page,
+  body.dashboard-page {
+    padding-top: 0;
+  }
+
   .navbar {
     position: fixed;
     top: 0;
@@ -2707,7 +2822,7 @@ input, textarea, select {
     position: sticky;
     top: 0;
     z-index: 900;
-    padding: var(--space-4);
+    padding: 0 var(--space-4) var(--space-4);
     max-height: 100vh;
     border-bottom: 1px solid var(--border-dark);
     overflow: hidden;
@@ -2719,8 +2834,8 @@ input, textarea, select {
   }
 
   .dashboard-logo {
-    padding: 0 0 var(--space-4);
-    margin-bottom: var(--space-4);
+    padding: 0 0 var(--space-3);
+    margin-bottom: var(--space-3);
   }
 
   .dashboard-mobile-toggle {
@@ -2729,6 +2844,7 @@ input, textarea, select {
     justify-content: space-between;
     width: 100%;
     margin-bottom: var(--space-3);
+    padding-top: var(--space-2);
     color: var(--pure-white);
   }
 
@@ -2840,6 +2956,14 @@ input, textarea, select {
     padding: var(--space-5);
   }
 
+  .dashboard-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-panel-card {
+    padding: var(--space-4);
+  }
+
   .dashboard-table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -2854,6 +2978,18 @@ input, textarea, select {
 
   .dashboard-table {
     min-width: 680px;
+  }
+
+  .error-card {
+    padding: 32px 20px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-actions .btn {
+    width: 100%;
   }
 
   .auth-container {

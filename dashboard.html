@@ -26,23 +26,23 @@
       </div>
 
       <nav class="dashboard-nav">
-        <a href="404.html" class="dashboard-nav-item active" data-section="overview">
+        <a href="#overview" class="dashboard-nav-item active" data-section="overview">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
           Overview
         </a>
-        <a href="404.html" class="dashboard-nav-item" data-section="orders">
+        <a href="#orders" class="dashboard-nav-item" data-section="orders">
           <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           My Orders
         </a>
-        <a href="404.html" class="dashboard-nav-item" data-section="wishlist">
+        <a href="#wishlist" class="dashboard-nav-item" data-section="wishlist">
           <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           Wishlist
         </a>
-        <a href="404.html" class="dashboard-nav-item" data-section="profile">
+        <a href="#profile" class="dashboard-nav-item" data-section="profile">
           <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           Profile
         </a>
-        <a href="404.html" class="dashboard-nav-item" data-section="settings">
+        <a href="#settings" class="dashboard-nav-item" data-section="settings">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
           Settings
         </a>
@@ -101,11 +101,34 @@
           </div>
         </div>
 
-        <!-- Recent Orders -->
+        <div class="dashboard-highlight-grid" data-aos="fade-up">
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Welcome back</h3>
+              <span class="status-badge completed">Member</span>
+            </div>
+            <p class="dashboard-panel-copy">Your wardrobe favorites are ready, and a new seasonal drop is waiting for you in your saved list.</p>
+            <div class="dashboard-pill-list">
+              <span class="dashboard-pill">Free shipping above $200</span>
+              <span class="dashboard-pill">2 rewards ready to use</span>
+            </div>
+          </div>
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Next best step</h3>
+            </div>
+            <ul class="dashboard-panel-list">
+              <li>Check the latest arrival in your wishlist before it sells out.</li>
+              <li>Use your reward points on the next premium order.</li>
+              <li>Update your saved address for faster checkout.</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="dashboard-table-container" data-aos="fade-up">
           <div class="dashboard-table-header">
             <h3>Recent Orders</h3>
-            <a href="404.html" class="btn btn-outline btn-sm" data-section="orders" onclick="document.querySelector('[data-section=orders]').click()">View All</a>
+            <a href="#orders" class="btn btn-outline btn-sm" data-section="orders">View All</a>
           </div>
           <table class="dashboard-table" id="ordersTable">
             <thead>
@@ -153,6 +176,29 @@
 
       <!-- Orders Section -->
       <div class="dashboard-section" id="orders" style="display: none;">
+        <div class="dashboard-highlight-grid">
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Order tracker</h3>
+              <span class="status-badge pending">1 in transit</span>
+            </div>
+            <p class="dashboard-panel-copy">Your most recent orders are on track, and your premium delivery preferences are already saved for the next checkout.</p>
+            <div class="dashboard-pill-list">
+              <span class="dashboard-pill">3 delivered this month</span>
+              <span class="dashboard-pill">1 replacement pending</span>
+            </div>
+          </div>
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Delivery notes</h3>
+            </div>
+            <ul class="dashboard-panel-list">
+              <li>Express delivery is available for last-minute gifting.</li>
+              <li>Your return label is ready for the pair of boots.</li>
+              <li>Order updates will arrive by email and SMS.</li>
+            </ul>
+          </div>
+        </div>
         <div class="dashboard-table-container">
           <div class="dashboard-table-header">
             <h3>All Orders</h3>
@@ -182,6 +228,29 @@
 
       <!-- Wishlist Section -->
       <div class="dashboard-section" id="wishlist" style="display: none;">
+        <div class="dashboard-highlight-grid">
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Saved for later</h3>
+              <span class="status-badge completed">3 ready</span>
+            </div>
+            <p class="dashboard-panel-copy">Your wishlist is filled with standout pieces from the latest collection, including premium accessories and comfort-first staples.</p>
+            <div class="dashboard-pill-list">
+              <span class="dashboard-pill">2 on sale</span>
+              <span class="dashboard-pill">1 limited drop</span>
+            </div>
+          </div>
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Why you saved them</h3>
+            </div>
+            <ul class="dashboard-panel-list">
+              <li>Perfect for the next weekend getaway.</li>
+              <li>High-value pieces with strong seasonal appeal.</li>
+              <li>Great options for gifting and layering.</li>
+            </ul>
+          </div>
+        </div>
         <div class="dashboard-table-container">
           <div class="dashboard-table-header">
             <h3>My Wishlist</h3>
@@ -213,6 +282,29 @@
 
       <!-- Profile Section -->
       <div class="dashboard-section" id="profile" style="display: none;">
+        <div class="dashboard-highlight-grid">
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Profile strength</h3>
+              <span class="status-badge completed">90%</span>
+            </div>
+            <p class="dashboard-panel-copy">You're already set up for a fast checkout experience, and a few saved preferences will help your next order feel even smoother.</p>
+            <div class="dashboard-pill-list">
+              <span class="dashboard-pill">Address saved</span>
+              <span class="dashboard-pill">Email verified</span>
+            </div>
+          </div>
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Recommended updates</h3>
+            </div>
+            <ul class="dashboard-panel-list">
+              <li>Add your preferred payment method for one-tap checkout.</li>
+              <li>Save a second shipping address for gift orders.</li>
+              <li>Turn on SMS updates for delivery milestones.</li>
+            </ul>
+          </div>
+        </div>
         <div class="dashboard-table-container">
           <div class="dashboard-table-header">
             <h3>My Profile</h3>
@@ -243,6 +335,29 @@
 
       <!-- Settings Section -->
       <div class="dashboard-section" id="settings" style="display: none;">
+        <div class="dashboard-highlight-grid">
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Security & updates</h3>
+              <span class="status-badge completed">Protected</span>
+            </div>
+            <p class="dashboard-panel-copy">Your account settings are already secure, and a few preference updates can make future shopping even easier.</p>
+            <div class="dashboard-pill-list">
+              <span class="dashboard-pill">Two-step alerts on</span>
+              <span class="dashboard-pill">Marketing emails enabled</span>
+            </div>
+          </div>
+          <div class="dashboard-panel-card">
+            <div class="dashboard-panel-head">
+              <h3>Preference tips</h3>
+            </div>
+            <ul class="dashboard-panel-list">
+              <li>Keep your password updated every few months.</li>
+              <li>Choose your preferred channel for delivery alerts.</li>
+              <li>Turn on newsletter preferences for first access to drops.</li>
+            </ul>
+          </div>
+        </div>
         <div class="dashboard-table-container">
           <div class="dashboard-table-header">
             <h3>Account Settings</h3>
