@@ -120,13 +120,12 @@ const Auth = {
     const nav = $('.navbar .container');
     if (!nav) return;
 
-    // Update nav for logged-in users while keeping the original icon layout
+    // Keep the account link pointing to the login page instead of the dashboard
     const loginLink = nav.querySelector('a[href="login.html"]');
     if (loginLink) {
-      const isAdmin = userData.role === 'admin';
-      loginLink.href = App.isLoggedIn ? (isAdmin ? 'admin.html' : 'dashboard.html') : 'login.html';
-      loginLink.setAttribute('aria-label', App.isLoggedIn ? (isAdmin ? 'Admin dashboard' : 'Dashboard') : 'Account');
-      loginLink.setAttribute('title', App.isLoggedIn ? (isAdmin ? 'Admin dashboard' : 'Dashboard') : 'Account');
+      loginLink.href = 'login.html';
+      loginLink.setAttribute('aria-label', 'Login');
+      loginLink.setAttribute('title', 'Login');
     }
   },
 
